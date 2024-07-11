@@ -1,0 +1,6 @@
+com\proyectofinal\proyectofinal\repository\UsuarioRepository.class
+com\proyectofinal\proyectofinal\ProyectoFinalApplication.class
+com\proyectofinal\proyectofinal\modelo\Usuario.class
+com\proyectofinal\proyectofinal\Servicio\UsuarioServicioImplementacion.class
+com\proyectofinal\proyectofinal\ControladorUsuario\ControladorUsuario.class
+com\proyectofinal\proyectofinal\Servicio\UsuarioServicio.class

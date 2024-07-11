@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Copy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}"> <!-- Cambio a Thymeleaf para la hoja de estilos -->
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="barraPrincipal">
+                    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom rounded-pillBarra">
+                        <div class="container-fluid">
+                            <nav class="navbar-nav flex-column menuPrincipal">
+                                <a class="nav-link ms-3 fw-bold" href="#"><img src="./logos/spotify.png"
+                                        alt="Icono 1" style="width: 24px; height: 24px; filter: brightness(0) invert(1);"
+                                        class="me-2">Spotify</a>
+                                <a class="nav-link ms-3 fw-bold" href="#"><img src="./logos/inicio.png"
+                                        alt="Icono 1" style="width: 24px; height: 24px; filter: brightness(0) invert(1);"
+                                        class="me-2">Inicio</a>
+                                <a class="nav-link ms-3 fw-bold" href="#"><img src="./logos/buscar.png"
+                                        alt="Icono 1" style="width: 24px; height: 24px; filter: brightness(0) invert(1);"
+                                        class="me-2">Buscar</a>
+                            </nav>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="footer-wrapper">
+                    <a class="nav-link ms-3 text-gray fw-bold biblioteca" href="#"><img src="./logos/biblioteca.png"
+                            alt="Icono 1" style="width: 24px; height: 24px; filter: brightness(0) invert(1);"
+                            class="me-2">Tu Biblioteca</a>
+                    <div class="etiqueta bg-gray rounded-pillBarra">
+                        <p class="textoEtiqueta1 text-white fw-bold mb-0">Crea tu primera lista</p>
+                        <p class="textoEtiqueta2 text-white" style="font-size: 14px;">Es muy facil, y te echaremos una
+                            mano.</p>
+                        <button class="btnLista btn-primary rounded-pill ms-3 fw-bold px-3 py-1"
+                            style="margin-bottom: 20px;">Crear lista</button>
+                    </div>
+
+                    <footer class="footer mt-auto py-3 bg-dark-custom">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Centro de seguridad y privacidad</a></li>
+                            <li><a href="#">Políticas de privacidad</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Información sobre los anuncios</a></li>
+                            <li><a href="#">Accesibilidad</a></li>
+                        </ul>
+                        <div class="btnIdioma">
+                            <a class="rounded-pillBtn nav-link ms-2 text-white" href="#"><img
+                                    src="./logos/red-mundial.png" alt="Icono 1"
+                                    style="width: 20px; height: 20px; filter: brightness(0) invert(1);"
+                                    class="me-2">Español de España</a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+            <!-- Parte negra de la pagina -->
+            <div class="col-lg-9">
+                <main id="main" class="mainPrincipal">
+                    <header>
+                        <nav class="navbar navbar-expand-lg bg-dark-custom rounded-pillBarra">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse justify-content-end"
+                                    id="navbarNavAltMarkup">
+                                    <div class="navbar-nav botones">
+                                        <a class="nav-link active bg-secondarybutton button rounded-pill text-black fw-bold"
+                                            aria-current="page" th:href="@{/}">Cerrar Sesión</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <div class="scroll bg-dark-custom">
+                        <div class="scroll-horizontal">
+                            <header>
+                                <nav class="navbar rounded-pillBarra">
+                                    <div class="container-fluid">
+                                        <button class="navbar-toggler text-white fw-bold mb-0" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#artistasPopulares"
+                                            aria-controls="artistasPopulares" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                            <a class="buttonA nav-link active rounded-pill text-white fw-bold"
+                                                aria-current="page" href="#">Artistas populares</a>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </header>
+
+                            <div class="artistas-container d-flex flex-row justify-content-center align-items-center">
+                                <!-- Artista 1 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/duki.jpeg}" alt="Duki">
+                                    <p class="textoArtista1 text-white fw-bold mb-0">Duki</p>
+                                </div>
+                                <!-- Artista 2 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/cro.jpg}" alt="Cro">
+                                    <p class="textoArtista2 text-white fw-bold mb-0">Cro</p>
+                                </div>
+                                <!-- Artista 3 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/ysya.jpg}" alt="Ysy A">
+                                    <p class="textoArtista3 text-white fw-bold mb-0">Ysy A</p>
+                                </div>
+                                <!-- Artista 4 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/nicki.jpg}" alt="Nicki Nicole">
+                                    <p class="textoArtista4 text-white fw-bold mb-0">Nicki</p>
+                                </div>
+                                <!-- Artista 5 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/tiago.jpeg}" alt="Tiago PZK">
+                                    <p class="textoArtista5 text-white fw-bold mb-0">Tiago PZK</p>
+                                </div>
+                                <!-- Artista 6 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/emilia.jpeg}" alt="Emilia Mernes">
+                                    <p class="textoArtista6 text-white fw-bold mb-0">Emilia</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sección de tendencias -->
+                        <div class="scroll-horizontal">
+                            <header>
+                                <nav class="navbar rounded-pillBarra">
+                                    <div class="container-fluid">
+                                        <button class="navbar-toggler text-white fw-bold mb-0" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#artistasPopulares"
+                                            aria-controls="artistasPopulares" aria-expanded="false"
+                                            aria-label="Toggle navigation">
+                                            <a class="buttonA nav-link active rounded-pill text-white fw-bold"
+                                                aria-current="page" href="#">Tendencias</a>
+                                        </button>
+                                    </div>
+                                </nav>
+                            </header>
+
+                            <div class="artistas-container d-flex flex-row justify-content-center align-items-center">
+                                <!-- Artista 1 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/duki.jpeg}" alt="Duki"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista1 text-white fw-bold mb-0">Duki</p>
+                                </div>
+                                <!-- Artista 2 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/cro.jpg}" alt="Cro"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista2 text-white fw-bold mb-0">Cro</p>
+                                </div>
+                                <!-- Artista 3 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/ysya.jpg}" alt="Ysy A"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista3 text-white fw-bold mb-0">Ysy A</p>
+                                </div>
+                                <!-- Artista 4 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/nicki.jpg}" alt="Nicki Nicole"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista4 text-white fw-bold mb-0">Nicki</p>
+                                </div>
+                                <!-- Artista 5 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/tiago.jpeg}" alt="Tiago PZK"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista5 text-white fw-bold mb-0">Tiago PZK</p>
+                                </div>
+                                <!-- Artista 6 -->
+                                <div class="artista-item">
+                                    <img th:src="@{/artistas/emilia.jpeg}" alt="Emilia Mernes"
+                                        style="width: 90%; height: auto; border-radius: 70%;">
+                                    <p class=" textoArtista6 text-white fw-bold mb-0">Emilia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
